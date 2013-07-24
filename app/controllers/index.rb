@@ -3,21 +3,21 @@ get '/' do
   erb :index
 end
 
-get '/events/:id/' do
-  p params
-  @event = Event.find(params(:id)
-  erb :event_show
-end
+# get '/events/:id/' do
+#   p params
+#   @event = Event.find(params(:id)
+#   erb :event_show
+# end
 
-post '/events/show' do
- @events = Event.all
- erb :event_show
-end
+# post '/events/show' do
+#  @events = Event.all
+#  erb :event_show
+# end
 
 post '/events/create' do
-  Event.create(params)
+  @new_event=Event.create(params)
   @events = Event.all
-  erb :index
+  erb :index  
 end
 
 post '/events/delete' do
