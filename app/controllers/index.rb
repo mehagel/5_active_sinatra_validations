@@ -4,7 +4,8 @@ get '/' do
 end
 
 get '/events/:id/' do
-  @event = Event.find(id)
+  p params
+  @event = Event.find(params(:id)
   erb :event_show
 end
 
