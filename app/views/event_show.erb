@@ -1,4 +1,15 @@
-<h2><%=@event.organizer_name%> Invites YOU to <%=@event.title%> on
-  <%=@event.date%></h2>
-<p>RSVP to <a href="mailto:
-  <%=@event.organizer_email%>"><%=@event.organizer_email%></a></p>
+
+
+  <ul>
+  <% @events.each do |event| %>
+  <li><%= event.id %></a><li><%= event.title %></a>
+  </li>
+  <li><%= event.organizer_name%></a>
+  </li>
+  <li><%= event.date %></a>
+  </li>
+  <li><%= event.organizer_email %></a>
+  </li>
+  <br>
+
+  <% end %>

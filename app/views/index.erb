@@ -1,5 +1,21 @@
-  <ul>
-    <% @events.each do |event| %>
-      <li><a href="/events/<%=event.id%>/show"><%=event.date%></a> - <%=event.title%></li>
-    <% end %>
-  </ul>
+<head>
+    <title>EVENTS</title>
+</head>
+  <h1>Welcome to EVENT HANDLER!</h1>
+
+<head>
+    <title>CRUD</title>
+</head>
+<form method='post' action='/events/create'>
+  Event: <Input type='title' name='title'><br>
+  Date:  <Input type='date' name='date'><br>
+  Name:  <Input type='text' name='organizer_name'><br>
+  Email: <Input type='email' name='organizer_email'><br>
+  <button>Add Event</button>
+  <br>
+</form>
+<br>
+
+<form method='post' action='/events/show'>
+  <button>See All events</button>
+</form>
