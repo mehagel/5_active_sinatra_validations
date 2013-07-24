@@ -2,7 +2,7 @@
 
   <ul>
   <% @events.each do |event| %>
-  <li><%= event.id %></a><li><%= event.title %></a>
+  <li><a href="/event/<%= event.id %>"><%= event.id %></a><li><%= event.title %></a>
   </li>
   <li><%= event.organizer_name%></a>
   </li>

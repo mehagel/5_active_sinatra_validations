@@ -18,4 +18,22 @@
 
 <form method='post' action='/events/show'>
   <button>See All events</button>
+
+
+  <ul>
+  <% @events.each do |event| %>
+  <li><a href="/event/<%= event.id %>"><%= event.id %></a><li><%= event.title %></a>
+  </li>
+  <li><%= event.organizer_name%></a>
+  </li>
+  <li><%= event.date %></a>
+  </li>
+  <li><%= event.organizer_email %></a>
+  </li>
+  <br>
+
+  <% end %>
 </form>
+
+
+
