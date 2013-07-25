@@ -17,7 +17,7 @@ end
 post '/events/create' do
   @new_event=Event.create(params)
   @events = Event.all
-  erb :index  
+  erb :index   
 end
 
 post '/events/delete' do
