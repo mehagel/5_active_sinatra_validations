@@ -1,14 +1,17 @@
+<div>
+  <head>
+    <title>EVENTS</title>
+</head>
+  <h1>Welcome to EVENT HANDLER!</h1>
 
-<!-- 
+    <form method='post' action='/events/delete'>
+      <button>Delete Event</button><input type = 'hidden' name='id' value=<%= @event.id %>>
+    </form>
+
   <ul>
-  <% @events.each do |event| %>
-  <li><a href="/event/<%= event.id %>"><%= event.id %></a><li><%= event.title %></a>
-  </li>
-  <li><%= event.organizer_name%></a>
-  </li>
-  <li><%= event.date %></a>
-  </li>
-  <li><%= event.organizer_email %></a>
-  </li>
-  <br> -->
+    <li><%= @event.organizer_name%></br>
+        <%= @event.date %></br>
+        <%= @event.organizer_email %></br>
+  </ul>
+</div>
 

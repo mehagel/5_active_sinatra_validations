@@ -6,35 +6,21 @@
   <% if @new_event %>
   <h2><%= @new_event.errors.full_messages%></h2>
   <% end %>
-
-<head>
-    <title>CRUD</title>
-</head>
-<form method='post' action='/events/create'>
-  Event: <Input type='title' name='title'><br>
-  Date:  <Input type='date' name='date'><br>
-  Name:  <Input type='text' name='organizer_name'><br>
-  Email: <Input type='email' name='organizer_email'><br>
-  <button>Add Event</button>
-  <br>
-</form>
-<br>
-
-
-
-  <ul>
-  <% @events.each do |event| %>
-  <li><a href="/event/<%= event.id %>"><%= event.id %></a><li><%= event.title %></a>
-  </li>
-  <li><%= event.organizer_name%></a>
-  </li>
-  <li><%= event.date %></a>
-  </li>
-  <li><%= event.organizer_email %></a>
-  </li>
-  <br>
-
-  <% end %>
+    <form method='post' action='/events/create'>
+      Event: <Input type='title' name='title' placeholder='Event'><br>
+      Date:  <Input type='date' name='date'><br>
+      Name:  <Input type='text' name='organizer_name'placeholder='Organizer Name'><br>
+      Email: <Input type='email' name='organizer_email'placeholder='Organizer Email'><br>
+      <button>Add Event</button>
+      <br>
+      <ul>
+      <% @events.each do |event| %>
+        <li><a href="/event/<%= event.id %>"><%= event.title %></a></li>
+        <%= event.organizer_name%><br>
+        <%= event.date %><br>
+        <%= event.organizer_email %><br>
+        <br>
+      <% end %>
 </form>
 
 
