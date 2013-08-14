@@ -8,11 +8,6 @@ get '/event/:id' do
   erb :event_show
 end
 
-# post '/events/show' do
-#  @events = Event.all
-#  erb :event_show
-# end
-
 post '/events/create' do
   @new_event=Event.create(params)
   @events = Event.all
@@ -24,3 +19,4 @@ post '/events/delete' do
   @events = Event.all
   erb :index
 end
+
