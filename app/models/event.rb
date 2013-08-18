@@ -8,7 +8,6 @@ class Event < ActiveRecord::Base
 		p self.date
 		begin 
 			if Date.today > self.date
-				puts "Hello"
 			  errors.add(:date,"Is Invalid: Event Can't Be In The Past!")
 			return false
 			end
