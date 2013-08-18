@@ -3,7 +3,7 @@
 </head>
   <h1>Welcome to EVENT HANDLER!</h1>
 
-  <% if @new_event %>
+  <% if @new_event && !@new_event.errors.empty? %>
   <h2><%= @new_event.errors.full_messages%></h2>
   <% end %>
     <form method='post' action='/events'>
