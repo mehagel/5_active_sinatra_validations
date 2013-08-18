@@ -12,7 +12,6 @@ class Event < ActiveRecord::Base
 			return false
 			end
 		rescue
-			puts "Hello There"
 			errors.add(:date, "Is Invalid!")
 			return false
 		end

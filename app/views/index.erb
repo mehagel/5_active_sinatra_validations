@@ -4,8 +4,10 @@
   <h1>Welcome to EVENT HANDLER!</h1>
 
   <% if @new_event && !@new_event.errors.empty? %>
-  <h2><%= @new_event.errors.full_messages%></h2>
-  <% end %>
+        <% @new_event.errors.full_messages.each do |error|%>
+        <h2><%= error%><br></h2>
+        <%end%>
+      <% end %><br>
     <form method='post' action='/events'>
       Event: <Input type='title' name='title' placeholder='Event'><br>
       Date:  <Input type='date' name='date'><br>
