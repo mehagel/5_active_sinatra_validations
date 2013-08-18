@@ -9,14 +9,13 @@ get '/event/:id' do
 end
 
 post '/events' do
-  p params
   sessions =nil
   session[:title]=params[:title]
-  @title = session[:title] 
   session[:name]=params[:organizer_name]
-  @name = session[:name] 
   session[:email]=params[:organizer_email]
-  @email = session[:email] 
+  @email = session[:email]
+  @name = session[:name] 
+  @title = session[:title] 
   @new_event=Event.create(params)
   @events = Event.all
   erb :index 
