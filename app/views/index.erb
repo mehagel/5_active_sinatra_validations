@@ -9,10 +9,10 @@
         <%end%>
       <% end %><br>
     <form method='post' action='/events'>
-      Event: <Input type='title' name='title' placeholder='Event'><br>
+      Event: <Input type='title' name='title' placeholder='Event' value=<%=@title%>><br>
       Date:  <Input type='date' name='date'><br>
-      Name:  <Input type='text' name='organizer_name'placeholder='Organizer Name'><br>
-      Email: <Input type='email' name='organizer_email'placeholder='Organizer Email'><br>
+      Name:  <Input type='text' name='organizer_name'placeholder='Organizer Name' value=<%=@name%>><br>
+      Email: <Input type='email' name='organizer_email'placeholder='Organizer Email'value=<%=@email%>><br>
       <button>Add Event</button>
       <br>
       <ul>
