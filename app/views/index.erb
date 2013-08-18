@@ -6,7 +6,7 @@
   <% if @new_event %>
   <h2><%= @new_event.errors.full_messages%></h2>
   <% end %>
-    <form method='post' action='/events/create'>
+    <form method='post' action='/events'>
       Event: <Input type='title' name='title' placeholder='Event'><br>
       Date:  <Input type='date' name='date'><br>
       Name:  <Input type='text' name='organizer_name'placeholder='Organizer Name'><br>

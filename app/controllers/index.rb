@@ -8,7 +8,7 @@ get '/event/:id' do
   erb :event_show
 end
 
-post '/events/create' do
+post '/events' do
   @new_event=Event.create(params)
   @events = Event.all
   erb :index 
